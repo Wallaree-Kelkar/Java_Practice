@@ -1,0 +1,22 @@
+case study on procedures:
+case study 1
+
+books_borrow(prn,bid,name,doi,dor,status,fine_amt)
+initially: dor = null
+status = I
+fine_amt = null
+
+call the procedure:
+update dor
+update status = r
+update fine_amt based on - 
+	1. if noD <=15 then fine = 0
+	2. if noD btw 16 to 30 then fine = 10rs per day
+	3. if nod > 30 then fine is 25 rs per day
+
+case study 2
+student(prn, name, class, age)
+student_backup(time_del,prn,name,class,age)
+call the procedure:
+1. delete the record from student
+2. insert the deleted record in student_backup with time stamp

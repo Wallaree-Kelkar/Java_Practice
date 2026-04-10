@@ -1,0 +1,43 @@
+RMI:
+remote method invocation
+
+RMI operates at the transport layer.
+Mainly there's a client - server architecture.
+Client - stub(representation/proxy of client) - RRL - transport layer - RRL(remote reference layer) - skeleton(resides on server side - stub and skeleton communicate with each other) - server
+
+RMI consists of RMI server, client and Registry (eg real life phonebook) 
+Server has many resources with it. So, to track these resources - server provides a unique name to each resource and stores it in the registry. Due to the unique name, the client can access the resource. Rebind is done by server (assigning unique name to resource) and lookup is done by client (searching for that name)
+
+To run any RMI application, 4 programs are required - client, server, interface and implementation class.
+If client wants to access a resource, it first looks into the registry - it performs a lookup and checks for the unique name
+
+What does stub do?
+Marshaling - client writing something to a server.
+Unmarshaling - reading data
+Stub class initiates a connection with remote JVM. then, it marshals parameters to remote JVM, and waits. Then, it reads the return value or exception. THen it returns value to the caller.
+
+what abt Skeleton?
+Skeleton can't read, it only does marshaling. It accesses the class which contains the contents of --- wait, if it cant read then how is it finding the relevant class???
+
+remote interface -
+used as a manual/contract which is followed by both client and server
+
+implementation class - 
+Unicast remote object - used for one to one connection (hence it's used here)
+
+To run any such program, we need to first run the server program. then, the client program.
+
+
+
+
+
+
+
+
+GIT doubt: (to be asked to gpt)
+i have a doubt abt uploading files on github. I want to upload everything in my folder to github. I do have a .gitignore file in my folder, outside my src. So is this file
+
+
+10.04
+Actually I was going to do RMI right now, but I realized that uploading everything on Git has a higher priority, so I'll be doing that now.
+ 

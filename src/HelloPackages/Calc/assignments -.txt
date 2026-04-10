@@ -1,0 +1,9 @@
+assignments - 
+os 
+dbms
+
+
+
+s = hoolahoops
+k = 3
+hoo, ool, ola, lah, aho, hoo, oop, ops 
