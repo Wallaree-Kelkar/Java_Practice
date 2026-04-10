@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+class Compute {
+private:
+    float sum;
+    float diff;
+
+public:
+
+Compute(){
+sum = 0;
+diff = 0;
+}
+    Compute(float n1, float n2) {
+        sum = n1 + n2;
+        diff = n1 - n2;
+    }
+
+    friend void Output(Compute& t);
+};
+
+void Output(Compute& t) {
+    cout << "Sum of the numbers is " << t.sum << " km" << endl;
+    cout << "Difference of the numbers is " << t.diff << " km" << endl;
+}
+
+int main() {
+    Compute c(12.4, 14.5);
+    Output(c);
+    return 0;
+}
